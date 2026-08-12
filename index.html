@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura de Cuidado | Sura</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero" id="hero">
+        <img src="assets/tigre.png" alt="Tigre Sura" class="tigre tigre-izq" data-aos="fade-right" data-aos-delay="200">
+        <img src="assets/tigre.png" alt="Tigre Sura" class="tigre tigre-der" data-aos="fade-left" data-aos-delay="200">
+
+        <h2 class="pre-title" data-aos="fade-down" data-aos-delay="100">¿Qué se necesita para tener un buen día en el trabajo?</h2>
+        <h1 class="main-title" data-aos="fade-up" data-aos-delay="300">Pequeños gestos que hacen mejor el día</h1>
+        <div class="scroll-indicator" data-aos="fade-in" data-aos-delay="600">↓ Descubre cómo ↓</div>
+    </header>
+
+    <section class="section-frase">
+        <div class="container text-center">
+            <div class="frase-parts-container">
+                <h3 class="frase-part" data-aos="fade-up" data-aos-delay="0">"El respeto nos une,</h3>
+                <h3 class="frase-part" data-aos="fade-up" data-aos-delay="300">la comunicación nos acerca</h3>
+                <h3 class="frase-part highlight" data-aos="fade-up" data-aos-delay="600">y el autocuidado nos enseña que una buena convivencia empieza por nosotros.</h3>
+            </div>
+            <p class="frase-sub" data-aos="fade-up" data-aos-delay="900">Cada palabra, cada gesto y cada forma de relacionarnos puede hacer sentir al otro escuchado, valorado y respetado."</p>
+            
+            <button class="btn-info" data-aos="zoom-in" data-aos-delay="1200" onclick="toggleModal('modal-frase')">¿Por qué estas palabras?</button>
+            
+            <div id="modal-frase" class="modal-overlay hidden" onclick="toggleModal('modal-frase')">
+                <div class="modal-content" onclick="event.stopPropagation()">
+                    <span class="close-modal" onclick="toggleModal('modal-frase')">&times;</span>
+                    <h3>Explicación del Concepto</h3>
+                    <p>Elegimos estas palabras porque la cultura de cuidado no es una regla, es una invitación. Queremos que cada colaborador de Sura se vea reflejado en la frase.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-poster">
+        <div class="container poster-wrapper" data-aos="fade-up">
+            <div class="poster-container">
+                <img src="assets/poster.jpg" alt="Póster de la campaña" class="poster-img">
+                
+                <div class="hotspot" style="top: 30%; left: 20%;">
+                    <div class="tooltip"><h3>Empatía Visual</h3><p>Tonos que reflejan cercanía y confianza.</p></div>
+                </div>
+                <div class="hotspot" style="top: 60%; right: 25%;">
+                    <div class="tooltip"><h3>El Gesto</h3><p>Un café representa una pausa y conexión humana genuina.</p></div>
+                </div>
+            </div>
+            <div class="poster-text" data-aos="fade-left" data-aos-delay="200">
+                <h3>El Concepto Visual</h3>
+                <p>Pasamos de la teoría a la acción. Un simple café entregado a un compañero materializa el respeto y la amabilidad de la que hablamos.</p>
+                <p class="instruction">*(Pasa el ratón o toca los puntos para ver detalles)*</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-video" id="video-section">
+        <div class="container text-center">
+            <h3 data-aos="fade-up" class="video-title">De la palabra a la realidad</h3>
+            <div class="video-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                <video id="suraVideo" loop muted>
+                    <source src="assets/video.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <div class="video-overlay" id="videoOverlay" onclick="playVideo()">
+                    <div class="play-btn">▶</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-cierre">
+        <div class="container text-center" data-aos="fade-up">
+            <h2>La cultura de cuidado en Sura ya empezó.</h2>
+            <div class="cta-wrapper">
+                <button class="btn-cta" id="btnConfetti">Regala un café virtual hoy ☕</button>
+                <button class="btn-repeat hidden" id="btnRepeatConfetti" data-aos="fade-in">Enviar de nuevo 🔄</button>
+            </div>
+            <p id="successMessage" class="success-message hidden">¡Café virtual enviado con éxito!</p>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
